@@ -1,0 +1,19 @@
+# 服务环境全局配置
+profile-env: ${profile-env}
+
+my:
+  name: liuailan-dev
+  age: 28
+
+test:
+  name: liuailan-dev
+  age: 28
+  sex: girl
+  local: shanxi
+
+spring:
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/zhenrongbao
+    username: root
+    password: root

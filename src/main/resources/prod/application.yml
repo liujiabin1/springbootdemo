@@ -1,0 +1,12 @@
+# 服务环境全局配置
+profile-env: ${profile-env}
+
+my:
+  name: liuailan-prod
+  age: 28
+
+test:
+  name: liuailan-prod
+  age: 28
+  sex: girl
+  local: shanxi
