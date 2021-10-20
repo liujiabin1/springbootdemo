@@ -2,23 +2,30 @@
 profile-env: ${profile-env}
 
 my:
-  name: liuailan-dev
+  name: liuailan-test
   age: 28
 
 test:
-  name: liuailan-dev
+  name: liuailan-test
   age: 28
   sex: girl
   local: shanxi
 
 spring:
   datasource:
-    driver-class-name: com.mysql.jdbc.Driver
-    url: jdbc:mysql://localhost:3306/zhenrongbao
-    username: root
-    password: root
+    configs:
+      master:
+        jdbc-url: jdbc:mysql://127.0.0.1/zhenrongbao?useUnicode=true&characterEncoding=utf8
+        username: root
+        password: root
+        # hikari:
+        minimum-idle: 1
+        maximum-pool-size: 5
 
-  jpa:
-    hibernate:
-      ddl-auto: update  # 第一次简表create  后面用update
-    show-sql: true
+      slave:
+        jdbc-url: jdbc:mysql://127.0.0.1/zhenrongbao?useUnicode=true&characterEncoding=utf8
+        username: root
+        password: root
+        # hikari:
+        minimum-idle: 1
+        maximum-pool-size: 5
